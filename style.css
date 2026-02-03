@@ -26,7 +26,7 @@ h2, h1{
 
 #container{
     display: grid;
-    grid-template-rows: 1fr .5fr 4fr auto 4fr auto;
+    grid-template-rows: 1fr .5fr 4fr auto auto auto;
     text-align: center;
 }
 
@@ -82,6 +82,7 @@ main{
     background-color: #9bb1ff;
     display: grid;
     justify-content: center;
+    padding-top: 1em;
     padding-bottom: 2em;
 }
 
@@ -139,14 +140,24 @@ div h4{
 }
 
 #about-section{
-    background-color: orange;
-}
-
-footer{
-    background-color:  #adc4fb;
+    background-color:  #8088f2;
+    justify-content: center;
+     padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+    color: #252525;
 }
 
 #about-logo{
     width: 60px;
     padding-top: 1em;
 }
+
+#about-section p{
+    text-align: justify;
+}
+
+footer{
+    background-color:  #adc4fb;
+}
+
