@@ -8,9 +8,9 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Playpen Sans", cursive;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 
 }
 
@@ -19,10 +19,16 @@ a{
     color: inherit;
 }
 
+
+
 #container{
     display: grid;
-    grid-template-rows: 1fr .5fr 4fr 4fr 4fr auto;
+    grid-template-rows: 1fr .5fr 4fr auto 4fr auto;
     text-align: center;
+}
+
+h3{
+    text-align: left;
 }
 
 header{
@@ -71,9 +77,65 @@ nav{
 
 main{
     background-color: #9bb1ff;
+    display: grid;
+    justify-content: center;
+    padding-bottom: 2em;
 }
 
-#article-section{
+#best-stickers{
+    display: flex;
+    gap: 1em;
+}
+
+.sticker-pack{
+    border-radius: 16px;
+    border: 2px solid #757bc8;
+    overflow: hidden;
+}
+
+.sticker-container{
+  width: 90px;
+    height: 90px;
+}
+
+/* for pastel sticker pack */
+#pastel .sticker-container{
+    background: url('./assets/pastel-sticker-pack.jpeg') no-repeat center/cover;
+}
+
+/* for pixel sticker pack */
+#pixel .sticker-container{
+    background: url('./assets/pixel-sticker-pack.jpeg') no-repeat center/cover;
+}
+
+/* for candycore sticker pack */
+#candycore .sticker-container{
+    background: url('./assets/candycore-sticker-pack.jpeg') no-repeat right/cover;
+}
+
+/* for shell sticker pack */
+#shell .sticker-container{
+    background: url('./assets/shell-sticker-pack.jpeg') no-repeat right/cover;
+}
+
+/* for chrome sticker pack */
+#chrome .sticker-container{
+    background: url('./assets/chrome-sticker-pack.jpeg') no-repeat right/cover;
+}
+
+/* for whimsy sticker pack */
+#whimsy .sticker-container{
+    background: url('./assets/whimsy-sticker-pack.jpeg') no-repeat right/cover;
+}
+
+div h4{
+    font-size: .8em;
+    background-color: #757bc8;
+    margin: 0;
+    padding: 0.2em;
+}
+
+#about-section{
     background-color: orange;
 }
 
