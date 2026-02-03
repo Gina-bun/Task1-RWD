@@ -1,0 +1,15 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    box-sizing: border-box;
+    background-color: #e3f2fd;
+    margin: 0;
+    padding: 0;
+
+}
+
+#container{
+    display: grid;
+    
+}
