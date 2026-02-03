@@ -19,7 +19,10 @@ a{
     color: inherit;
 }
 
-
+h2, h1{
+    margin: 0;
+    padding: 0;
+}
 
 #container{
     display: grid;
@@ -141,4 +144,9 @@ div h4{
 
 footer{
     background-color:  #adc4fb;
+}
+
+#about-logo{
+    width: 60px;
+    padding-top: 1em;
 }
