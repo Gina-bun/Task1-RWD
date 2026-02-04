@@ -1,163 +1,345 @@
-html{
-    scroll-behavior: smooth;
-    list-style: none;
+html {
+  /* scroll-behavior: smooth; */
+  list-style: none;
 }
-body{
-    box-sizing: border-box;
-    background-color: #e3f2fd;
-    margin: 0;
-    padding: 0;
-    font-family: "Playpen Sans", cursive;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-a{
-    text-decoration: none;
-    color: inherit;
+body {
+  box-sizing: border-box;
+  background-color: #e3f2fd;
+  margin: 0;
+  padding: 0;
+  font-family: "Playpen Sans", cursive;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
 }
 
-h2, h1{
-    margin: 0;
-    padding: 0;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-#container{
-    display: grid;
-    grid-template-rows: 1fr .5fr 4fr auto auto auto;
-    text-align: center;
+h2,
+h1 {
+  margin: 0;
+  padding: 0;
 }
 
-h3{
-    text-align: left;
+#container {
+  display: grid;
+  grid-template-rows: 1fr 0.5fr 4fr auto auto auto;
+  text-align: center;
 }
 
-header{
-    background-color: #ccdbfd;
+h3 {
+  text-align: left;
+  padding-left: 4em;
+}
+
+header {
+  background-color: #ccdbfd;
+  display: flex;
+  padding: 1em;
+}
+
+header .logo {
+  margin: auto;
+  width: 120px;
+  height: 50px;
+}
+
+nav {
+  background-color: #adc4fb;
+  color: #757bc8;
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.3em;
+}
+
+#landing-section {
+  background: url("./assets/bg.jpeg") no-repeat center/cover;
+  position: relative;
+}
+
+#landing-section h2 {
+  position: absolute;
+  font-size: 2em;
+  top: -5%;
+  left: 55%;
+  z-index: 99;
+  transform: translate(-50%, 50%) rotate(5deg);
+  font-weight: normal;
+  color: rgb(85, 85, 85);
+}
+
+#landing-section .pin-paper {
+  position: absolute;
+  width: 350px;
+  top: -70%;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(5deg);
+}
+
+
+#landing-section .tape-paper {
+display: none;
+}
+
+.floating-sticker{
+    display: none;
+}
+
+main {
+  background-color: #9bb1ff;
+  display: grid;
+  justify-content: center;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.sticker-collection {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.sticker-pack {
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #757bc8;
+  align-items: center;
+  overflow: hidden;
+}
+
+.sticker-container {
+  width: 90px;
+  height: 90px;
+}
+
+.carousel{
+    /* width: 400; */
     display: flex;
-    padding: 1em;
-}
-
-header .logo{
-    margin: auto;
-    width: 120px;
-    height: 50px;
-}
-
-nav{
-    background-color: #adc4fb;
-    color: #757bc8;
-    padding: .5em;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 2.3em;
+    margin: 40px auto;
 }
 
-#landing-section{
-    background: url('./assets/bg.jpeg') no-repeat center/cover;
-    position: relative;
-}
-
-#landing-section h2{
-    position: absolute;
-    font-size: 2em;
-    top: -10%;
-    left: 55%;
-    z-index: 99;
-    transform: translate(-50%, 50%) rotate(5deg);
-}
-
-#landing-section img{
-    position: absolute;
-    width: 350px;
-    top: -70%;
-    left: 50%;
-    transform: translate(-50%, 50%) rotate(5deg);
-}
-
-main{
-    background-color: #9bb1ff;
-    display: grid;
-    justify-content: center;
-    padding-top: 1em;
-    padding-bottom: 2em;
-}
-
-#best-stickers{
+.carousel-items,.slide{
     display: flex;
     gap: 1em;
 }
 
-.sticker-pack{
-    border-radius: 16px;
-    border: 2px solid #757bc8;
+.carousel-items{
+    width: 380px;
+    height: fit-content;
     overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease;
+    gap: 0;
 }
 
-.sticker-container{
-  width: 90px;
-    height: 90px;
+
+.slide{
+    min-width: 100%;
+    justify-content: center;
 }
 
 /* for pastel sticker pack */
-#pastel .sticker-container{
-    background: url('./assets/pastel-sticker-pack.jpeg') no-repeat center/cover;
+#pastel .sticker-container {
+  background: url("./assets/pastel-sticker-pack.jpeg") no-repeat center/cover;
 }
 
 /* for pixel sticker pack */
-#pixel .sticker-container{
-    background: url('./assets/pixel-sticker-pack.jpeg') no-repeat center/cover;
+#pixel .sticker-container {
+  background: url("./assets/pixel-sticker-pack.jpeg") no-repeat center/cover;
 }
 
 /* for candycore sticker pack */
-#candycore .sticker-container{
-    background: url('./assets/candycore-sticker-pack.jpeg') no-repeat right/cover;
+#candycore .sticker-container {
+  background: url("./assets/candycore-sticker-pack.jpeg") no-repeat right/cover;
 }
 
 /* for shell sticker pack */
-#shell .sticker-container{
-    background: url('./assets/shell-sticker-pack.jpeg') no-repeat right/cover;
+#shell .sticker-container {
+  background: url("./assets/shell-sticker-pack.jpeg") no-repeat right/cover;
 }
 
 /* for chrome sticker pack */
-#chrome .sticker-container{
-    background: url('./assets/chrome-sticker-pack.jpeg') no-repeat right/cover;
+#chrome .sticker-container {
+  background: url("./assets/chrome-sticker-pack.jpeg") no-repeat right/cover;
 }
 
 /* for whimsy sticker pack */
-#whimsy .sticker-container{
-    background: url('./assets/whimsy-sticker-pack.jpeg') no-repeat right/cover;
+#whimsy .sticker-container {
+  background: url("./assets/whimsy-sticker-pack.jpeg") no-repeat right/cover;
 }
 
-div h4{
-    font-size: .8em;
-    background-color: #757bc8;
-    margin: 0;
-    padding: 0.2em;
+div h4 {
+    width: 100%;
+  font-size: 0.8em;
+  background-color: #757bc8;
+  margin: 0;
+  padding: 0.2em;
 }
 
-#about-section{
-    background-color:  #8088f2;
+#about-section {
+  background-color: #8088f2;
+  justify-content: center;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 2em;
+  color: #252525;
+}
+
+#about-logo {
+  width: 60px;
+  padding-top: 1em;
+}
+
+#about-section p {
+  text-align: justify;
+}
+
+footer {
+  background-color: #adc4fb;
+  display: grid;
+  text-align: center;
+}
+
+/* tablet view */
+
+@media (min-width: 768px) {
+
+#landing-section h2 {
+  position: absolute;
+  font-size: 2em;
+  width: fit-content;
+  top: 37%;
+ left: 50%;
+ transform: translate(-50%, -35%) rotate(6deg);
+
+}
+
+#landing-section .tape-paper {
+  display: block;
+  position: absolute;
+  width: 510px;
+  top: -35%;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(10deg);
+}
+
+#landing-section .pin-paper{
+    display: none;
+}
+
+.floating-sticker{
+    display: block;
+    position: absolute;
+    width: 70px;
+}
+
+.floating-sticker#boba-sticker{
+  top: 35%;
+  left: 20%;
+  transform: rotate(25deg);
+}
+
+.floating-sticker#chrome-star-sticker{
+   top: 45%;
+  right: 35%;
+  transform: rotate(25deg);
+}
+
+.floating-sticker#shell-sticker{
+   top: 10%;
+  left: 45%;
+  transform: rotate(45deg);
+}
+
+main {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.sticker-collection {
+  gap: 2em;
+}
+
+.carousel-items, .slide{
+    gap: 2em
+}
+
+.carousel-items{
+    width: 680px;
+    height: fit-content;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease;
+    gap: 0;
+}
+
+.sticker-container {
+    width: 170px;
+    height: 130px;
+}
+
+
+#about-section {
+  padding-left: 4em;
+  padding-right: 4em;
+
+}
+
+  footer {
+    display: flex;
     justify-content: center;
-     padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 2em;
-    color: #252525;
+    gap: 0.5em;
+  }
 }
 
-#about-logo{
-    width: 60px;
-    padding-top: 1em;
+/* desktop view */
+@media (min-width: 1024px){
+    .floating-sticker{
+    display: block;
+    position: absolute;
+    width: 90px;
 }
 
-#about-section p{
-    text-align: justify;
+.floating-sticker#boba-sticker{
+  top: 43%;
+  left: 30%;
+  transform: rotate(25deg);
 }
 
-footer{
-    background-color:  #adc4fb;
+.floating-sticker#chrome-star-sticker{
+   top: 70%;
+  right: 35%;
+  transform: rotate(25deg);
+    width: 103px;
+
 }
 
+.floating-sticker#shell-sticker{
+   top: 0;
+  left: 45%;
+  transform: rotate(42deg);
+    width: 97px;
+
+}
+
+    #container {
+  grid-template-rows: 1fr 0.5fr 4.5fr auto auto auto;
+    }
+    #landing-section .tape-paper {
+  display: block;
+  position: absolute;
+  width: 45vw;
+  top: -57%;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(8deg);
+}
+}
