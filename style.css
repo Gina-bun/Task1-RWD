@@ -77,6 +77,13 @@ nav {
   }
 }
 
+.tape-wrapper,
+.tape-paper,
+.tape-text,
+.floating-sticker{
+  display: none;
+}
+
 .pin-wrapper{
    position: absolute;
    top: -70%;
@@ -241,26 +248,57 @@ footer {
 
 @media (min-width: 768px) {
 
-#landing-section h2 {
+@keyframes popShake {
+  0%{
+    transform: scale(0.2) rotate(0deg);
+    opacity: 0;
+  }
+  70%{
+    transform: scale(1.05) rotate(0deg);
+    opacity: 1;
+  }
+  85%{
+    transform: scale(0.98) rotate(-2deg);
+  }
+  92%{
+    transform: scale(1.02) rotate(2deg);
+  }
+  100%{
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.tape-wrapper{
+  display: block;
   position: absolute;
-  font-size: 2em;
-  width: fit-content;
-  top: 37%;
- left: 50%;
- transform: translate(-50%, -35%) rotate(6deg);
+  top: -35%;
+  left: 45%;
+  transform: translate(-50%, 50%) rotate(5deg);
+  z-index: 2;
+  pointer-events: none;
 
 }
 
 #landing-section .tape-paper {
   display: block;
-  position: absolute;
   width: 510px;
-  top: -35%;
-  left: 50%;
-  transform: translate(-50%, 50%) rotate(10deg);
 }
 
-#landing-section .pin-paper{
+.tape-text {
+  display: block;
+  position: absolute;
+  font-size: 2em;
+  top: 50%;
+  left: 50%;
+  animation: none;
+  transform: translate(-50%, -50%) rotate(6deg);
+  color: rgb(85, 85, 85);
+  white-space: nowrap;
+  z-index: 3;
+}
+
+
+#landing-section .pin-paper, .pin-text{
     display: none;
 }
 
@@ -268,24 +306,29 @@ footer {
     display: block;
     position: absolute;
     width: 70px;
+    z-index: 4;
+    animation: popShake 0.6s ease-out both;
 }
 
 .floating-sticker#boba-sticker{
-  top: 35%;
-  left: 20%;
+  top: 65%;
+  left: 7%;
   transform: rotate(25deg);
+  animation-delay: 0.1s;
 }
 
 .floating-sticker#chrome-star-sticker{
-   top: 45%;
-  right: 35%;
+   top: 73%;
+  right: 25%;
   transform: rotate(25deg);
+  animation-delay: 0.2s;
 }
 
 .floating-sticker#shell-sticker{
-   top: 10%;
+   top: 7%;
   left: 45%;
   transform: rotate(45deg);
+  animation-delay: 0.3s;
 }
 
 main {
@@ -331,43 +374,60 @@ main {
 
 /* desktop view */
 @media (min-width: 1024px){
-    .floating-sticker{
+  .tape-wrapper{
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 2;
+  }
+
+  .tape-paper{
+    width: 700px;
+    min-width: 700px;
+  }
+
+.tape-text {
+  display: block;
+  position: absolute;
+  font-size: 2em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(6deg);
+  color: rgb(85, 85, 85);
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.floating-sticker{
     display: block;
     position: absolute;
     width: 90px;
 }
 
 .floating-sticker#boba-sticker{
-  top: 43%;
-  left: 30%;
-  transform: rotate(25deg);
+  top: 53%;
+  left: 5%;
+  transform: rotate(-2deg) rotate(-45deg);
 }
 
 .floating-sticker#chrome-star-sticker{
-   top: 70%;
+  top: 70%;
   right: 35%;
   transform: rotate(25deg);
-    width: 103px;
+  width: 103px;
 
 }
 
 .floating-sticker#shell-sticker{
-   top: 0;
+  top: 5%;
   left: 45%;
   transform: rotate(42deg);
     width: 97px;
 
 }
 
-    #container {
+#container {
   grid-template-rows: 1fr 0.5fr 4.5fr auto auto auto;
     }
-    #landing-section .tape-paper {
-  display: block;
-  position: absolute;
-  width: 45vw;
-  top: -57%;
-  left: 50%;
-  transform: translate(-50%, 50%) rotate(8deg);
-}
+ 
 }
