@@ -161,6 +161,16 @@ main {
     margin: 40px auto;
 }
 
+.prev,.next{
+  border: none;
+  background-color: #8088f2;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  display: grid;
+  align-items: center;
+}
+
 .carousel-items{
     position: relative;
     width: 380px;
@@ -415,7 +425,7 @@ main {
     z-index: 2;
   }
 
-  
+
 
   .tape-paper{
     width: 700px;
