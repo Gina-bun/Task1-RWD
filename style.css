@@ -212,6 +212,36 @@ main {
   background: url("./assets/whimsy-sticker-pack.jpeg") no-repeat right/cover;
 }
 
+/* for kawaii sticker pack */
+#kawaii .sticker-container {
+  background: url("./assets/kawaii-sticker-pack.jpeg") no-repeat right/cover;
+}
+
+/* for retro sticker pack */
+#retro .sticker-container {
+  background: url("./assets/retro-sticker-pack.png") no-repeat right/cover;
+}
+
+/* for floralsticker pack */
+#floral .sticker-container {
+  background: url("./assets/floral-sticker-pack.jpeg") no-repeat right/cover;
+}
+
+/* for vapourwave sticker pack */
+#vapourwave .sticker-container {
+  background: url("./assets/vapourwave-sticker-pack.jpeg") no-repeat right/cover;
+}
+
+/* for mystical sticker pack */
+#mystical .sticker-container {
+  background: url("./assets/mystical.jpeg") no-repeat right/cover;
+}
+
+/* for galaxy sticker pack */
+#galaxy .sticker-container {
+  background: url("./assets/galaxy.jpeg") no-repeat right/cover;
+}
+
 div h4 {
     width: 100%;
   font-size: 0.8em;
