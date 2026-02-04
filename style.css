@@ -298,6 +298,10 @@ footer {
   }
 }
 
+h3 {
+  padding-left: 6em;
+}
+
 .tape-wrapper{
   display: block;
   position: absolute;
@@ -410,6 +414,8 @@ main {
     transform: translate(-50%, 0%);
     z-index: 2;
   }
+
+  
 
   .tape-paper{
     width: 700px;
